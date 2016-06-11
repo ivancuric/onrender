@@ -20,7 +20,7 @@ or just include it as a standalone script:
 
 ## Usage
 ```javascript
-function needsLayout () { /* stuff that needs the element to render */ }
+function needsLayout () { /* stuff that needs the element to be rendered */ }
 const elementToWatch =  $('.element') /* or */ document.querySelector('.element')
 
 onRender(elementToWatch, needsLayout)
