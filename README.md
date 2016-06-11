@@ -9,14 +9,17 @@ Uses `requestAnimationFrame` and `getBoundingClientRect` while remaining *very* 
  Best used while there are no other long layout / paint operations running. But that applies to everything. But why would you have long running layout / paint operations on the first place? ಠ_ಠ
 
 ## Installation
+Use it as a node module:
 ```bash
 npm install --save onrender
+```
+or just include it as a standalone script:
+```html
+<script src="onrender.js"></script>
 ```
 
 ## Usage
 ```javascript
-import onRender from 'onrender'
-
 function needsLayout () { /* stuff that needs the element to render */ }
 const elementToWatch =  $('.element') /* or */ document.querySelector('.element')
 
