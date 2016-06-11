@@ -1,0 +1,8 @@
+CACHE/
+log/
+node_modules/
+bower_components/
+*.sublime-*
+npm-debug.log
+.DS_Store
+.idea/
