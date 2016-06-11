@@ -9,7 +9,7 @@ Useful when appending HTML to the DOM or toggling the style from `display: none`
 ```javascript
 import onRender from 'onrender'
 
-function needsLayout () { /*...*/ }
+function needsLayout () { /* stuff that needs the element to render */ }
 const elementToWatch =  $('.element') /* or */ document.querySelector('.element')
 
 onRender(elementToWatch, needsLayout)
