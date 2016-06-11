@@ -1,9 +1,15 @@
 'use strict';
 
 // Takes a callback which is fired when the element is rendered
+(function() {
+  if (typeof exports == 'object') {
+    module.exports = onRender;
+  } else {
+    window.onRender = onRender;
+  }
+})();
 
-export default function(element, callback) {
-
+function onRender(element, callback) {
   // Element can be jQuery or native
   if (element instanceof jQuery) {
     element = element[0];
@@ -25,8 +31,8 @@ export default function(element, callback) {
 
   // Wrap call in a setTimeout(0) to place on the JS stack
   // and wait for the next frame before starting the loop
-  setTimeout(() => {
-    requestAnimationFrame(() => {
+  setTimeout(function() {
+    requestAnimationFrame(function() {
       checkRender();
     });
   }, 0);
