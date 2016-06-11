@@ -1,0 +1,26 @@
+{
+  "name": "onrender",
+  "version": "1.0.0",
+  "description": "Wait for the DOM element to render before continuing",
+  "main": "onrender.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivancuric/onrender.git"
+  },
+  "keywords": [
+    "requestanimationframe",
+    "render",
+    "layout",
+    "frame",
+    "wait"
+  ],
+  "author": "Ivan Čurić",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ivancuric/onrender/issues"
+  },
+  "homepage": "https://github.com/ivancuric/onrender#readme"
+}
