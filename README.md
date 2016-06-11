@@ -9,7 +9,9 @@ Uses `requestAnimationFrame` and `getBoundingClientRect` while remaining *very* 
  Best used while there are no other long layout / paint operations running. But that applies to everything. But why would you have long running layout / paint operations on the first place? ಠ_ಠ
 
 ## Installation
-`npm install --save onrender`
+```bash
+npm install --save onrender
+```
 
 ## Usage
 ```javascript
