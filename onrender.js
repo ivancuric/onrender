@@ -1,8 +1,8 @@
 'use strict';
 
-// Takes a callback which is fired when the element is rendered in the DOM
+// Takes a callback which is fired when the element is rendered
 
-export default function onRender(element, callback) {
+export default function(element, callback) {
 
   // Element can be jQuery or native
   if (element instanceof jQuery) {
@@ -11,7 +11,7 @@ export default function onRender(element, callback) {
 
   let bcr;
   function checkRender() {
-    // Get dimensions from getBoundingClientRect. Elements not in the DOM
+    // Get dimensions from getBoundingClientRect. Elements not rendered
     // won't have dimensions
     bcr = element.getBoundingClientRect();
     if (bcr.height == 0 && bcr.width == 0) {
