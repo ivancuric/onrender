@@ -31,5 +31,5 @@ onRender(elementToWatch, needsLayout)
 
 **Pro-tips:**
  * Best used while there are no other long layout / paint operations running. But why would you have multiple long running layout / paint operations on the first place? ಠ_ಠ
- * Don't use while scrolling, since it will invalidate the layout and force `getBoundingClientRect` and [cause layout thrashing](https://gist.github.com/paulirish/5d52fb081b3570c81e3a).
+ * Don't use while scrolling, since it will invalidate the layout and force `getBoundingClientRect` to [cause layout thrashing](https://gist.github.com/paulirish/5d52fb081b3570c81e3a). Otherwise the reflow cost is free.
  * Works wonders if you have to toggle the `display` attribute before firing any transitions on the element.
