@@ -1,4 +1,6 @@
-# onrender
+# onrender [![NPM version](https://img.shields.io/npm/v/onrender.svg?style=flat)](https://www.npmjs.com/package/onrender) [![NPM downloads](https://img.shields.io/npm/dm/onrender.svg?style=flat)](https://npmjs.org/package/onrender))
+
+
 
 Wait for the DOM element to render before continuing with JS.
 Useful when appending HTML to the DOM or toggling the style from `display: none` to `display: block`.
