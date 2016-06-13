@@ -17,7 +17,9 @@
     // Pop a forced layout tied to a promise
     Promise.resolve(element.getBoundingClientRect())
     .then(function(value) {
-      callback(value);
+      requestAnimationFrame(function() {
+        callback(value);
+      });
     });
   }
 })();
