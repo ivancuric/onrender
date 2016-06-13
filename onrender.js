@@ -15,9 +15,9 @@
       element = element[0];
     }
     // Pop a forced layout tied to a promise
-    var promise = Promise.resolve(element.getBoundingClientRect())
+    Promise.resolve(element.getBoundingClientRect())
     .then(function(value) {
-      callback();
+      callback(value);
     });
   }
 })();
