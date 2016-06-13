@@ -1,7 +1,7 @@
 {
   "name": "onrender",
-  "version": "1.0.5",
-  "description": "Wait for the DOM element to render before continuing",
+  "version": "1.1.0",
+  "description": "Returns a Promise when an element finishes laying out by using a forced reflow and then runs the callback function.",
   "main": "onrender.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,11 +11,12 @@
     "url": "git+https://github.com/ivancuric/onrender.git"
   },
   "keywords": [
-    "requestanimationframe",
+    "promise"
     "render",
     "layout",
     "frame",
-    "wait"
+    "wait",
+    "reflow"
   ],
   "author": "Ivan Čurić",
   "license": "MIT",
