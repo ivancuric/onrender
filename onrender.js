@@ -15,14 +15,17 @@
       element = element[0];
     }
 
-    var bcr;
+    var bcr = null;
+    var timeout = false;
 
     // The loop
     function checkRender() {
-      // Get dimensions from getBoundingClientRect. Elements not rendered
-      // won't have dimensions
+      setTimeout(function(){
+        timeout = true;
+      }, 500);
+      // Get dimensions from getBoundingClientRect. Force layout.
       bcr = element.getBoundingClientRect();
-      if (bcr.height == 0 && bcr.width == 0) {
+      if (bcr.height == 0 && bcr.width == 0 && timeout === false) {
         // If the element isn't rendered, loop again on the next frame
         requestAnimationFrame(checkRender);
       } else {
@@ -31,12 +34,6 @@
       }
     }
 
-    // Wrap call in a setTimeout(0) to place on the JS stack
-    // and wait for the next frame before starting the loop
-    setTimeout(function() {
-      requestAnimationFrame(function() {
-        checkRender();
-      });
-    }, 0);
+    checkRender();
   }
 })();
