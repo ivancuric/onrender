@@ -13,7 +13,6 @@ function onRender(element, callback) {
       callback();
     });
   });
-  console.log('in module');
 }
 
 // Check if used as a standalone script or a node module
