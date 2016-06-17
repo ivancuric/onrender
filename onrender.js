@@ -7,12 +7,14 @@ function onRender(element, callback) {
   if (element instanceof jQuery) element = element[0];
 
   // Force a layout which returns a promise
-  Promise.resolve(element.getBoundingClientRect())
-  .then(function() {
-    requestAnimationFrame(function() {
-      callback();
-    });
-  });
+  // Promise.resolve(element.getBoundingClientRect())
+  // .then(function() {
+  //   requestAnimationFrame(function() {
+  //     callback();
+  //   });
+  // });
+  callback();
+
 }
 
 // Check if used as a standalone script or a node module
