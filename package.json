@@ -1,6 +1,6 @@
 {
   "name": "onrender",
-  "version": "1.2",
+  "version": "1.2.0",
   "description": "Returns a Promise when an element finishes laying out by using a forced reflow and then runs the callback function.",
   "main": "onrender.js",
   "scripts": {
