@@ -9,12 +9,13 @@ function onRender(element, callback) {
   // Force a layout which returns a promise
   Promise.resolve(element.getBoundingClientRect())
   .then(function() {
+    // needs 2 frames to optimize properly
     requestAnimationFrame(function() {
-      callback();
+      requestAnimationFrame(function() {
+        callback();
+      });
     });
   });
-  callback();
-
 }
 
 // Check if used as a standalone script or a node module
