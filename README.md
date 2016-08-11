@@ -23,7 +23,7 @@ function needsLayout () {
   /* stuff that needs the element to be laid out */
 }
 
-const elementToWatch =  $('.element') /* or */ document.querySelector('.element')
+const elementToWatch = document.querySelector('.element')
 
 onRender(elementToWatch, needsLayout)
 ```
