@@ -6,7 +6,7 @@ function onRender(element, callback) {
   // Force a layout which returns a Promise
   Promise.resolve(element.getBoundingClientRect())
   .then(function() {
-    // needs 2 frames for `will-change` to get to render (src: Paul Lewis)
+    // needs 2 frames for `will-change` to kick in properly (src: Paul Lewis)
     requestAnimationFrame(function() {
       requestAnimationFrame(function() {
         callback();
