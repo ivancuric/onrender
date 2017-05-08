@@ -1,23 +1,20 @@
-'use strict';
-
-// Takes a callback which is fired when the element is rendered
-function onRender(element, callback) {
-
-  // Force a layout which returns a Promise
-  Promise.resolve(element.getBoundingClientRect())
-  .then(function() {
-    // needs 2 frames for `will-change` to kick in properly (src: Paul Lewis)
-    requestAnimationFrame(function() {
-      requestAnimationFrame(function() {
-        callback();
-      });
-    });
-  });
+/**
+ * A Promise wrapper for requestAnimationFrame
+ * @returns {Promise}
+ */
+export function rafPromise() {
+  return new Promise(requestAnimationFrame);
 }
 
-// Check if used as a standalone script or a node module
-if (typeof exports === 'object') {
-  module.exports = onRender;
-} else {
-  window.onRender = onRender;
+
+/**
+ * Used for detecting when an element is rendered
+ * @param {Node} element - The element that is waiting to be rendered
+ */
+
+export async function render(element) {
+  window.getComputedStyle(element);
+  const f1 = await rafPromise();
+  const f2 = await rafPromise();
+  return f2 - f1;
 }
