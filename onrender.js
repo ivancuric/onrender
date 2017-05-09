@@ -12,7 +12,7 @@ export function rafPromise() {
  * @param {Node} element - The element that is waiting to be rendered
  */
 
-export async function render(element) {
+export default async function render(element) {
   window.getComputedStyle(element);
   const f1 = await rafPromise();
   const f2 = await rafPromise();
