@@ -7,7 +7,7 @@ The double-RaF is used to give Chrome time to apply potential `will-change` opti
 
 Useful for running code that requires the element to be laid out or chaining style changes such as toggling the style from `display: none` to `display: block` followed by a transition which the browser would otherwise batch together resulting in no animations being fired.
 
-Use cases include overlays of all sorts you don't wish to keep in the memory such as modals, fullscreen navigations and other layout-intensive stuff.
+Use cases include overlays of all sorts you don't wish to keep in the memory such as modals, fullscreen navigations and other layout-intensive stuff. Oh, and it also returns the frametime if you need it.
 
 ## Installation
 ```bash
