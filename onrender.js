@@ -13,7 +13,7 @@ export function rafPromise() {
  */
 
 export default async function render(element) {
-  window.getComputedStyle(element);
+  element.getBoundingClientRect();
   const f1 = await rafPromise();
   const f2 = await rafPromise();
   return f2 - f1;
